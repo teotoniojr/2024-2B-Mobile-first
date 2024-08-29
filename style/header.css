@@ -12,9 +12,44 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 .caixa{
     display: flex;
     align-items: center;
+}
+
+.caixa__imagem{
+    padding: 1em;
+}
+
+.lista-menu{
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 60vw;
+}
+
+.caixa__botao:checked~.lista-menu{
+    display: block;
+}
+
+.lista-menu__titulo,
+.lista-menu__item{
+    padding: 1em;
+    background-color: var(--branco);
+}
+
+.lista-menu__titulo{
+    color: var(--laranja);
+    font-weight: bold;
+}
+.lista-menu__link{
+    color: var(--azul);
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.caixa__botao{
+    display: none;
 }
