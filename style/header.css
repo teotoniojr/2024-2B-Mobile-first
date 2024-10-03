@@ -1,4 +1,4 @@
-.cabecalho__menu-hamburguer {
+.cabecalho__menu-hamburguer{
     width: 24px;
     height: 24px;
     background-image: url(../img/Menu-hamburguer.png);
@@ -7,7 +7,7 @@
     display: inline-block;
 }
 
-.cabecalho {
+.cabecalho{
     background-color: var(--branco);
     display: flex;
     justify-content: space-between;
@@ -15,16 +15,16 @@
     position: relative;
 }
 
-.caixa {
+.caixa{
     display: flex;
     align-items: center;
 }
 
-.caixa__imagem {
+.caixa__imagem{
     padding: 1em;
 }
 
-.lista-menu {
+.lista-menu{
     display: none;
     position: absolute;
     top: 100%;
@@ -35,60 +35,93 @@
     display: block;
 }
 
+
 .lista-menu__titulo,
-.lista-menu__item {
+.lista-menu__item{
     padding: 1em;
     background-color: var(--branco);
 }
 
-.lista-menu__titulo {
+.lista-menu__titulo{
     color: var(--laranja);
     font-weight: bold;
 }
-
-.lista-menu__link {
+.lista-menu__link{
     color: var(--azul);
     text-decoration: none;
     text-transform: uppercase;
 }
-
-.caixa__botao {
+.caixa__botao{
     display: none;
 }
 
-.caixa__titulo {
+.caixa__titulo{
     display: none;
 }
-
 .opcoes{
     display: none;
 }
 
-@media screen and (min-width: 1024px) {
-    .caixa__titulo {
-        display: block;
-        font-family: var(--fonte-principal);
-        font-size: 30px;
-        font-weight: 400;
-    }
+.caixa__texto{
+    display:none
+}
 
-    .caixa__titulo--negrito {
-        font-weight: 700;
-        color: var(--azul)
+@media screen and (min-width: 1024px){
+    .caixa__titulo{
+        font-family: var(--fonte-secundaria);
+        font-weight: 400;
+        font-size: 30px;
+        display: block;
     }
-    
+    .caixa__titulo--negrito{
+        font-weight: 700;
+        color: var(--azul);
+    }
     .opcoes{
         display: flex;
     }
-
     .opcoes__item{
         padding: 0 1em;
         text-transform: uppercase;
     }
-
     .opcoes__link{
         text-decoration: none;
         color: var(--preto);
     }
+    .item__transparente{
+        display: none;
+    }
+    .cabecalho__menu-hamburguer{
+        display: none;
+    }
+    .opcoes__botao:checked ~ .lista-menu{
+        display: block;
+        width: auto;
+    }
 
+    .opcoes__botao{
+        display: none;
+    }
 }
+
+@media screen and (min-width: 1728px) {
+    .caixa__link{
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: var(--preto)
+    }
+
+    .cabecalho{
+        padding: 0 2em;
+    }
+
+    .opcoes{
+        margin-right: auto;
+    }
+
+    .caixa__texto{
+        display: block;
+    }
+}
+
